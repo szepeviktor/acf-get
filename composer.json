@@ -1,6 +1,7 @@
 {
     "name": "szepeviktor/acf-get",
     "description": "Strongly typed Advanced Custom Fields get_field function variants",
+    "license": "MIT",
     "require": {
         "php": ">=7.1"
     },
