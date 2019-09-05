@@ -87,6 +87,10 @@ class ACFget {
 	 */
 	public static function array_field( string $selector, array $default = [] ) : array {
 		$raw_value = \get_field( $selector, static::$post_id );
+		// FIXME ACF shim.
+		if ( '' === $raw_value ) {
+			$raw_value = [];
+		}
 		if ( is_array( $raw_value ) ) {
 			return $raw_value;
 		}
