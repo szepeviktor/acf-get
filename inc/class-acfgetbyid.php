@@ -3,11 +3,19 @@
  * Strongly typed Advanced Custom Fields get_field function variants with post ID.
  *
  * @package ACFget
- * @version 0.1.0
+ * @version 0.1.1
  */
 
 /**
  * Helper functions for getting strictly typed ACF field values by post ID.
+ *
+ * @method static string string_field( string $selector, int $post_id, string $default = '' )
+ * @method static int int_field( string $selector, int $post_id, int $default = 0 )
+ * @method static float float_field( string $selector, int $post_id, float $default = 0.0 )
+ * @method static bool bool_field( string $selector, int $post_id, bool $default = false )
+ * @method static bool|null trinary_field( string $selector, int $post_id, bool $default = null )
+ * @method static array array_field( string $selector, int $post_id, array $default = [] )
+ * @method static \WP_Post|null post_field( string $selector, int $post_id )
  */
 class ACFgetbyid {
 
