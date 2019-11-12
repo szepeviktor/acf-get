@@ -3,7 +3,6 @@
  * Strongly typed Advanced Custom Fields get_field function variants with post ID.
  *
  * @package ACFget
- * @version 0.1.1
  */
 
 /**
@@ -29,7 +28,7 @@ class ACFgetbyid {
 	 * @return mixed
 	 * @throws \LogicException
 	 */
-	public static function __callStatic( string $name, array $arguments ) {
+	public static function __callStatic( string $name, array $arguments ) { // phpcs:ignore NeutronStandard.Functions.LongFunction.LongFunction
 		// Check static method name.
 		if ( ! method_exists( 'ACFget', $name ) ) {
 			throw new \LogicException( sprintf( 'Method does not exist: ACFget::%s', $name ) );

@@ -1,11 +1,18 @@
 {
     "name": "szepeviktor/acf-get",
     "description": "Strongly typed Advanced Custom Fields get_field function variants",
+    "keywords": [
+        "advanced custom fields",
+        "get_field",
+        "wordpress"
+    ],
     "license": "MIT",
     "require": {
         "php": ">=7.1"
     },
     "require-dev": {
+        "automattic/phpcs-neutron-ruleset": "^1.5.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
         "phpstan/phpstan-shim": "^0.11.8",
         "szepeviktor/phpstan-wordpress": "^0.3.0"
     },

@@ -7,6 +7,7 @@ jobs:
     - checkout
     - run: composer validate
     - run: composer install
+    - run: vendor/bin/phpcs --standard=NeutronStandard --exclude=NeutronStandard.Functions.TypeHint inc/
     - run: vendor/bin/phpstan analyze
 workflows:
   version: 2

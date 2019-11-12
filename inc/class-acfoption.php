@@ -3,7 +3,6 @@
  * Strongly typed Advanced Custom Fields get_field function variants for options.
  *
  * @package ACFget
- * @version 0.1.1
  */
 
 /**

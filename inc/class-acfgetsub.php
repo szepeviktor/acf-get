@@ -3,7 +3,6 @@
  * Strongly typed Advanced Custom Fields get_sub_field function variants.
  *
  * @package ACFget
- * @version 0.1.0
  */
 
 /**
