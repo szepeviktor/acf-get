@@ -9,12 +9,15 @@
         "phpstan/phpstan-shim": "^0.11.8",
         "szepeviktor/phpstan-wordpress": "^0.3.0"
     },
+    "suggest": {
+        "wpackagist-plugin/advanced-custom-fields": "Customize WordPress with powerful, professional and intuitive fields."
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
     "autoload": {
         "classmap": [
             "inc/"
         ]
-    },
-    "config": {
-        "optimize-autoloader": true
     }
 }
