@@ -3,6 +3,7 @@
     "description": "Strongly typed Advanced Custom Fields get_field function variants",
     "keywords": [
         "advanced custom fields",
+        "acf",
         "get_field",
         "wordpress"
     ],
