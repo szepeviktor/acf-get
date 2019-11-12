@@ -2,13 +2,11 @@ version: 2
 jobs:
   test:
     docker:
-    - image: circleci/php:7.2.17-stretch
+    - image: circleci/php:7.2-stretch
     steps:
     - checkout
     - run: composer validate
     - run: composer install
-    - run: |
-           sed -e 's#^function is_countable(#// &#' -i vendor/giacocorsiglia/wordpress-stubs/wordpress-stubs.php
     - run: vendor/bin/phpstan analyze
 workflows:
   version: 2

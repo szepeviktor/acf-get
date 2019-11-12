@@ -87,10 +87,6 @@ class ACFget {
 	 */
 	public static function array_field( string $selector, array $default = [] ) : array {
 		$raw_value = \get_field( $selector, static::$post_id );
-		// FIXME ACF shim.
-		if ( '' === $raw_value ) {
-			$raw_value = [];
-		}
 		if ( is_array( $raw_value ) ) {
 			return $raw_value;
 		}
@@ -108,12 +104,12 @@ class ACFget {
 		if ( is_object( $raw_value ) && is_a( $raw_value, '\WP_Post', false ) ) {
 			return $raw_value;
 		}
-		// TODO Need a better way.
+		// FIXME Need a better way.
 		return null;
 	}
 }
 
-/* TODO New types
+/* TODO Add types
 Email
 Url
 Password

@@ -8,5 +8,3 @@ parameters:
         - %currentWorkingDirectory%/inc/
     autoload_files:
         - %currentWorkingDirectory%/tests/acf-pro-stubs.php
-    autoload_directories:
-        - %currentWorkingDirectory%/inc/

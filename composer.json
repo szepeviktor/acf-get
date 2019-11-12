@@ -6,14 +6,15 @@
         "php": ">=7.1"
     },
     "require-dev": {
-        "phpstan/phpstan-shim": "^0.11.0",
-        "szepeviktor/phpstan-wordpress": "^0.2.0"
+        "phpstan/phpstan-shim": "^0.11.8",
+        "szepeviktor/phpstan-wordpress": "^0.3.0"
+    },
+    "autoload": {
+        "classmap": [
+            "inc/"
+        ]
     },
     "config": {
         "optimize-autoloader": true
-    },
-    "scripts": {
-        "post-install-cmd": "PHPStan\\WordPress\\Composer\\FixWpStubs::php73Polyfill",
-        "post-update-cmd": "PHPStan\\WordPress\\Composer\\FixWpStubs::php73Polyfill"
     }
 }
