@@ -12,8 +12,8 @@
         "php": ">=7.1"
     },
     "require-dev": {
-        "automattic/phpcs-neutron-ruleset": "^1.5.3",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+        "automattic/phpcs-neutron-ruleset": "^3.2.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
         "phpstan/phpstan-shim": "^0.11.8",
         "szepeviktor/phpstan-wordpress": "^0.3.0"
     },
