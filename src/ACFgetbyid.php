@@ -48,12 +48,12 @@ class ACFgetbyid
             case 2:
                 // Selector only
                 // phpcs:ignore NeutronStandard.Functions.VariableFunctions.VariableFunction
-                $returnValue = ACFget::$name($arguments[0]);
+                $fieldValue = ACFget::$name($arguments[0]);
                 break;
             case 3:
                 // Selector and default
                 // phpcs:ignore NeutronStandard.Functions.VariableFunctions.VariableFunction
-                $returnValue = ACFget::$name($arguments[0], $arguments[2]);
+                $fieldValue = ACFget::$name($arguments[0], $arguments[2]);
                 break;
             default:
                 throw new \LogicException(sprintf('ACFget::%s needs 2 or 3 arguments.', $name));
@@ -62,6 +62,6 @@ class ACFgetbyid
         // Restore post ID
         ACFget::$postId = $previousPostId;
 
-        return $returnValue;
+        return $fieldValue;
     }
 }
