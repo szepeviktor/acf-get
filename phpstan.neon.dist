@@ -5,6 +5,6 @@ parameters:
     level: max
     inferPrivatePropertyTypeFromConstructor: true
     paths:
-        - %currentWorkingDirectory%/inc/
+        - %currentWorkingDirectory%/src/
     autoload_files:
         - %currentWorkingDirectory%/tests/acf-pro-stubs.php

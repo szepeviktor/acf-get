@@ -2,13 +2,14 @@ version: 2
 jobs:
   test:
     docker:
-    - image: circleci/php:7.2-stretch
+    - image: circleci/php:7.3-stretch
     steps:
     - checkout
-    - run: composer validate
-    - run: composer install
-    - run: vendor/bin/phpcs --standard=NeutronStandard --exclude=NeutronStandard.Functions.TypeHint inc/
-    - run: vendor/bin/phpstan analyze
+    - run: composer validate --no-interaction --strict
+    - run: composer install --no-interaction
+    - run: composer outdated --no-interaction --direct
+    - run: vendor/bin/phpcs --standard=PSR12NeutronRuleset --exclude=PSR1.Classes.ClassDeclaration src/
+    - run: php -d memory_limit=1G vendor/bin/phpstan analyze
 workflows:
   version: 2
   workflow:

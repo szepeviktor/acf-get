@@ -3,6 +3,7 @@
     "description": "Strongly typed Advanced Custom Fields get_field function variants",
     "keywords": [
         "advanced custom fields",
+        "acf",
         "get_field",
         "wordpress"
     ],
@@ -11,10 +12,9 @@
         "php": ">=7.1"
     },
     "require-dev": {
-        "automattic/phpcs-neutron-ruleset": "^1.5.3",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
-        "phpstan/phpstan-shim": "^0.11.8",
-        "szepeviktor/phpstan-wordpress": "^0.3.0"
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "szepeviktor/phpstan-wordpress": "^0.5.0",
+        "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^0.4.1"
     },
     "suggest": {
         "wpackagist-plugin/advanced-custom-fields": "Customize WordPress with powerful, professional and intuitive fields."
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "classmap": [
-            "inc/"
+            "src/"
         ]
     }
 }
