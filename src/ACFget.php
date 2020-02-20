@@ -131,6 +131,18 @@ class ACFget
         // FIXME Need a better way.
         return null;
     }
+
+    /**
+     * Return custom field value as an url string.
+     *
+     * @param string $selector
+     * @param string $default
+     * @return string
+     */
+    public static function urlField( string $selector, $default = '' ) : string {
+        $raw_value = \get_field( $selector, static::$post_id );
+        return ( false === \filter_var( $raw_value, FILTER_VALIDATE_URL ) ) ? $default : $raw_value;
+    }
 }
 
 /* TODO Add types.
