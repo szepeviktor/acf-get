@@ -23,7 +23,7 @@ class ACFget
     public static $postId = false;
 
     /**
-     * Return custom field value as an string.
+     * Return custom field value as a string.
      *
      * @param string $selector
      * @param string $default
@@ -33,6 +33,19 @@ class ACFget
     {
         $rawValue = \get_field($selector, static::$postId);
         return ($rawValue === null) ? $default : $rawValue;
+    }
+
+    /**
+     * Return custom URL field value as a string.
+     *
+     * @param string $selector
+     * @param string $default
+     * @return string
+     */
+    public static function urlField(string $selector, string $default = ''): string
+    {
+        $rawValue = \get_field($selector, static::$postId);
+        return (\filter_var($rawValue, \FILTER_VALIDATE_URL) === false) ? $default : $rawValue;
     }
 
     /**
@@ -121,7 +134,7 @@ class ACFget
 }
 
 /* TODO Add types.
-Email, Url, Password
+Email, Password
 Image, File, Wysiwyg Editor, oEmbed, Gallery
 Select, Checkbox, Radio Button, Button Group, True / False
 Link, Page Link, Relationship, Taxonomy, User

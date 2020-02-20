@@ -16,7 +16,7 @@ declare(strict_types=1);
 class ACFgetsub
 {
     /**
-     * Return repeater field value as an string.
+     * Return repeater field value as a string.
      *
      * @param string $selector
      * @param string $default
@@ -26,6 +26,19 @@ class ACFgetsub
     {
         $rawValue = \get_sub_field($selector);
         return ($rawValue === false) ? $default : $rawValue;
+    }
+
+    /**
+     * Return custom URL field value as a string.
+     *
+     * @param string $selector
+     * @param string $default
+     * @return string
+     */
+    public static function urlField(string $selector, string $default = ''): string
+    {
+        $rawValue = \get_sub_field($selector);
+        return (\filter_var($rawValue, \FILTER_VALIDATE_URL) === false) ? $default : $rawValue;
     }
 
     /**
