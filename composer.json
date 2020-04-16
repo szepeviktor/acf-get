@@ -12,9 +12,10 @@
         "php": ">=7.1"
     },
     "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-        "szepeviktor/phpstan-wordpress": "^0.5.0",
-        "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^0.4.1"
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.0",
+        "szepeviktor/phpstan-wordpress": "^0.6.0",
+        "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^0.4.1",
+        "paulthewalton/acf-pro-stubs": "5.8.9.1"
     },
     "suggest": {
         "wpackagist-plugin/advanced-custom-fields": "Customize WordPress with powerful, professional and intuitive fields."
