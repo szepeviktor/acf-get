@@ -117,6 +117,30 @@ class ACFget
     }
 
     /**
+     * Pluck a subfield from a repeater field and return an associative array.
+     *
+     * @param string $selector
+     * @param string $column
+     * @return array<mixed, mixed>
+     */
+    public static function pluckRepeaterField(string $selector, string $column): array
+    {
+        $rawValue = \get_field($selector, static::$postId);
+        if (!is_array($rawValue) || $rawValue === [] || !array_key_exists($column, array_values($rawValue)[0])) {
+            return [];
+        }
+        return array_reduce(
+            $rawValue,
+            static function ($assocArray, $subFields) use ($column) {
+                $key = mb_strtolower($subFields[$column] ?? strval(count($assocArray)));
+                unset($subFields[$column]);
+                return array_merge($assocArray, [$key => $subFields]);
+            },
+            []
+        );
+    }
+
+    /**
      * Return custom field value as instance of WP_Post.
      *
      * @param string $selector
@@ -139,5 +163,5 @@ Image, File, Wysiwyg Editor, oEmbed, Gallery
 Select, Checkbox, Radio Button, Button Group, True / False
 Link, Page Link, Relationship, Taxonomy, User
 Google Map, Date Picker, Date Time Picker, Time Picker, Color Picker
-Message, Accordion, Tab, Group, Repeater, Flexible Content, Clone
+Message, Accordion, Tab, Group, Flexible Content, Clone
 */
